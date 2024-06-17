@@ -8,11 +8,11 @@ export default function Home() {
       {/* Hero Section START */}
       <div className="flex justify-center mb-5 mt-10">
         <div className="relative w-9/12 h-96 z-10">
-          <div className="absolute w-full h-full translate-x-5 translate-y-5 bg-[#1da1f2]" />
+          <div className="absolute w-full h-full translate-x-5 translate-y-5 bg-black" />
           <Image
             src="/jakarta.jpeg"
             fill
-            className="object-cover"
+            className="object-cover sepia-[0.5] brightness-50 border-solid border-4 border-black"
             alt="Picture of jakarta"
           />
         </div>
