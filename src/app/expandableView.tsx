@@ -31,7 +31,7 @@ export default function ExpandableView() {
           width="32"
           height="7"
           rx="1"
-          className={`origin-center rotate-90 transition duration-200 ease-out ${expandState && "rotate-180"}`}
+          className={`origin-center rotate-90 transition duration-200 ease-out ${expandState && "!rotate-180"}`}
         />
       </svg>
       <div className={robotoCondensed500.className}>
