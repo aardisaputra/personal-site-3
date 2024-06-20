@@ -1,9 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 import { robotoCondensed500 } from "./fonts";
 
-export default function ExpandableView() {
+interface Props {
+  title: string;
+  children: ReactNode;
+}
+
+export default function ExpandableView({ title, children }: Props) {
   const [expandState, setExpandState] = useState(false);
 
   return (
@@ -35,11 +40,14 @@ export default function ExpandableView() {
         />
       </svg>
       <div className={robotoCondensed500.className}>
-        <h1 className="absolute z-10 ml-[1.5em] mt-[0.85em] text-5xl">TEST</h1>
+        <h1 className="absolute z-10 ml-[1.7em] mt-[0.85em] text-5xl">
+          {title}
+        </h1>
       </div>
-
       <div className="absolute w-full h-full right-3 translate-y-3 bg-[#736C6C]" />
-      <div className="absolute w-full h-full bg-[#000000]" />
+      <div className="absolute w-full h-full bg-[#000000]">
+        {expandState && children}
+      </div>
     </div>
   );
 }

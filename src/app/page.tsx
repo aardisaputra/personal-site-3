@@ -100,9 +100,15 @@ export default function Home() {
 
       {/* More Info Section START */}
       <div className="flex flex-col mt-7 space-y-8">
-        <ExpandableView />
-        <ExpandableView />
-        <ExpandableView />
+        <ExpandableView title="SKILLS">
+          <h1>TEST</h1>
+        </ExpandableView>
+        <ExpandableView title="EXPERIENCE">
+          <h1>TEST</h1>
+        </ExpandableView>
+        <ExpandableView title="PROJECTS">
+          <h1>TEST</h1>
+        </ExpandableView>
       </div>
       {/* More Info Section END */}
 
