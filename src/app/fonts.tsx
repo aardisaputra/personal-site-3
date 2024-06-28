@@ -19,3 +19,8 @@ export const robotoCondensed400 = Roboto_Condensed({
   subsets: ["latin"],
   weight: "400",
 });
+
+export const robotoCondensed200 = Roboto_Condensed({
+  subsets: ["latin"],
+  weight: "200",
+});

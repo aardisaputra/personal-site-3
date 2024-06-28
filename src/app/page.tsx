@@ -1,5 +1,10 @@
 import Image from "next/image";
-import { inter, robotoCondensed400, robotoCondensed500 } from "./fonts";
+import {
+  inter,
+  robotoCondensed400,
+  robotoCondensed500,
+  robotoCondensed200,
+} from "./fonts";
 import ExpandableView from "./expandableView";
 
 export default function Home() {
@@ -8,7 +13,7 @@ export default function Home() {
     "tailwind",
     "next-logo",
     "typescript",
-    "figma",
+    "flutter",
   ];
 
   const backendLogos = [
@@ -29,7 +34,7 @@ export default function Home() {
         <div className="relative w-[85%] h-96 z-10">
           <div className="absolute w-full h-full translate-x-5 translate-y-5 bg-black" />
           <Image
-            src="/jakarta.jpeg"
+            src="/bg.webp"
             fill
             className="object-cover sepia-[0.5] brightness-50 border-solid border-4 border-black"
             alt="Picture of jakarta"
@@ -124,7 +129,6 @@ export default function Home() {
             <div className="w-full text-center pb-2">
               <h1>Frontend</h1>
             </div>
-
             <div className="flex flex-wrap justify-center gap-3 mt-[0.5em] mx-[1em] pb-[3em]">
               {frontendLogos.map((logo) => (
                 <Image
@@ -139,11 +143,9 @@ export default function Home() {
                 />
               ))}
             </div>
-
             <div className="w-full text-center pb-2">
               <h1>Backend/Data</h1>
             </div>
-
             <div className="flex flex-wrap justify-center gap-3 mt-[0.5em] mx-[1em]">
               {backendLogos.map((logo) => (
                 <Image
@@ -161,10 +163,151 @@ export default function Home() {
           </div>
         </ExpandableView>
         <ExpandableView title="EXPERIENCE">
-          <h1>TEST</h1>
+          <div className={`${robotoCondensed500.className} mt-[7em]`}>
+            <div className="flex flex-col mt-[0.5em] ml-[3em] pb-[1em] gap-5">
+              <div className="flex flex-row gap-3">
+                <Image
+                  src={`/wealthfront.svg`}
+                  width={80}
+                  height={80}
+                  style={{
+                    objectFit: "contain",
+                  }}
+                  alt="Connecting line"
+                />
+                <div className="flex-col mt-[1em]">
+                  <h1>SWE Intern @ Wealthfront</h1>
+                  <div className={`${robotoCondensed200.className}`}>
+                    <h2>May 2024 - Aug 2024</h2>
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-row gap-3">
+                <Image
+                  src={`/path.jpeg`}
+                  width={80}
+                  height={80}
+                  style={{
+                    objectFit: "contain",
+                    borderRadius: "10px",
+                  }}
+                  alt="Connecting line"
+                />
+                <div className="flex-col mt-[1em]">
+                  <h1>Research @ California Path</h1>
+                  <div className={`${robotoCondensed200.className}`}>
+                    <h2>Jul 2023 - Present</h2>
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-row gap-3">
+                <Image
+                  src={`/blum.jpeg`}
+                  width={80}
+                  height={80}
+                  style={{
+                    objectFit: "contain",
+                    borderRadius: "100%",
+                  }}
+                  alt="Connecting line"
+                />
+                <div className="flex-col mt-[1em]">
+                  <h1>Web Dev @ Blum Center</h1>
+                  <div className={`${robotoCondensed200.className}`}>
+                    <h2>Feb 2022 - May 2024</h2>
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-row gap-3">
+                <Image
+                  src={`/oscar.jpeg`}
+                  width={80}
+                  height={80}
+                  style={{
+                    objectFit: "contain",
+                    borderRadius: "30%",
+                  }}
+                  alt="Connecting line"
+                />
+                <div className="flex-col mt-[1em]">
+                  <h1>SWE Intern @ Oscar Health</h1>
+                  <div className={`${robotoCondensed200.className}`}>
+                    <h2>May 2023 - Aug 2023</h2>
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-row gap-3">
+                <Image
+                  src={`/berkeley.jpeg`}
+                  width={80}
+                  height={80}
+                  style={{
+                    objectFit: "contain",
+                    borderRadius: "30%",
+                  }}
+                  alt="Connecting line"
+                />
+                <div className="flex-col mt-[1em]">
+                  <h1>Web Accessibility @ Berk One IT</h1>
+                  <div className={`${robotoCondensed200.className}`}>
+                    <h2>Jul 2022 - Jun 2023</h2>
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-row gap-3">
+                <Image
+                  src={`/urbaneyes.jpeg`}
+                  width={80}
+                  height={80}
+                  style={{
+                    objectFit: "contain",
+                    borderRadius: "30%",
+                  }}
+                  alt="Connecting line"
+                />
+                <div className="flex-col mt-[1em]">
+                  <h1>Data Eng. @ Urban Eyes</h1>
+                  <div className={`${robotoCondensed200.className}`}>
+                    <h2>Jun 2022 - Aug 2022</h2>
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-row gap-3">
+                <Image
+                  src={`/memoryz.jpeg`}
+                  width={80}
+                  height={80}
+                  style={{
+                    objectFit: "contain",
+                    borderRadius: "100%",
+                  }}
+                  alt="Connecting line"
+                />
+                <div className="flex-col mt-[1em]">
+                  <h1>SWE Intern @ MemoryZ</h1>
+                  <div className={`${robotoCondensed200.className}`}>
+                    <h2>Jun 2022 - Aug 2022</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </ExpandableView>
         <ExpandableView title="PROJECTS">
-          <h1>TEST</h1>
+          <div className={`${robotoCondensed500.className} mt-[7em]`}>
+            <div className="flex flex-wrap justify-center">
+              <div className="w-[15em] h-[12em] bg-white rounded-xl">
+                <div className="relative w-[15em] h-[6em] top-[6em] bg-gray-500 rounded-b-xl">
+                  <div className="flex-col ml-[1em] pt-[1em]">WealthDash</div>
+                  <div className={`${robotoCondensed200.className}`}>
+                    <div className="flex-col ml-[1em]">
+                      Lunch menu voting for Wealthfront employees
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </ExpandableView>
       </div>
       {/* More Info Section END */}

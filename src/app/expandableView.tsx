@@ -17,7 +17,7 @@ export default function ExpandableView({ title, children }: Props) {
         expandState
           ? title === "SKILLS"
             ? "h-[46rem]"
-            : "h-[24rem]"
+            : "h-[52rem]"
           : "h-[8rem]"
       }`}
       onClick={() => {
