@@ -3,6 +3,25 @@ import { inter, robotoCondensed400, robotoCondensed500 } from "./fonts";
 import ExpandableView from "./expandableView";
 
 export default function Home() {
+  const frontendLogos = [
+    "react",
+    "tailwind",
+    "next-logo",
+    "typescript",
+    "figma",
+  ];
+
+  const backendLogos = [
+    "mongodb",
+    "kubernetes",
+    "aws",
+    "gcp",
+    "java",
+    "sql",
+    "pandas",
+    "python",
+  ];
+
   return (
     <main className="">
       {/* Hero Section START */}
@@ -55,8 +74,8 @@ export default function Home() {
                 className={`${robotoCondensed400.className} text-black text-center`}
               >
                 Welcome to a glimpse of my professional/creative endeavors. I
-                code and drink diet coke. Talk to me about fintech, full-stack
-                dev, my Indonesian roots, ETL pipelines, or anything.
+                code and drink diet coke. Talk to me about full-stack
+                development, fintech, dev-ops, ETL pipelines, or anything.
               </h3>
             </div>
             <div className="relative h-[2.5rem] z-10">
@@ -101,7 +120,45 @@ export default function Home() {
       {/* More Info Section START */}
       <div className="flex flex-col mt-7 space-y-8">
         <ExpandableView title="SKILLS">
-          <h1>TEST</h1>
+          <div className={`${robotoCondensed500.className} mt-[7em]`}>
+            <div className="w-full text-center pb-2">
+              <h1>Frontend</h1>
+            </div>
+
+            <div className="flex flex-wrap justify-center gap-3 mt-[0.5em] mx-[1em] pb-[3em]">
+              {frontendLogos.map((logo) => (
+                <Image
+                  key={logo}
+                  src={`/${logo}.svg`}
+                  width={80}
+                  height={80}
+                  style={{
+                    objectFit: "contain",
+                  }}
+                  alt="Connecting line"
+                />
+              ))}
+            </div>
+
+            <div className="w-full text-center pb-2">
+              <h1>Backend/Data</h1>
+            </div>
+
+            <div className="flex flex-wrap justify-center gap-3 mt-[0.5em] mx-[1em]">
+              {backendLogos.map((logo) => (
+                <Image
+                  key={logo}
+                  src={`/${logo}.svg`}
+                  width={80}
+                  height={80}
+                  style={{
+                    objectFit: "contain",
+                  }}
+                  alt="Connecting line"
+                />
+              ))}
+            </div>
+          </div>
         </ExpandableView>
         <ExpandableView title="EXPERIENCE">
           <h1>TEST</h1>

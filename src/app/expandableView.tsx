@@ -13,7 +13,13 @@ export default function ExpandableView({ title, children }: Props) {
 
   return (
     <div
-      className={`relative mx-[2rem] transition-all duration-300 ease-in-out ${expandState ? "h-[24rem]" : "h-[8rem]"}`}
+      className={`relative mx-[2rem] transition-all duration-300 ease-in-out ${
+        expandState
+          ? title === "SKILLS"
+            ? "h-[46rem]"
+            : "h-[24rem]"
+          : "h-[8rem]"
+      }`}
       onClick={() => {
         setExpandState(!expandState);
       }}
@@ -44,8 +50,8 @@ export default function ExpandableView({ title, children }: Props) {
           {title}
         </h1>
       </div>
-      <div className="absolute w-full h-full right-3 translate-y-3 bg-[#736C6C]" />
-      <div className="absolute w-full h-full bg-[#000000]">
+      <div className="absolute w-full min-h-full right-3 translate-y-3 bg-[#736C6C]" />
+      <div className="absolute w-full min-h-full bg-[#000000]">
         {expandState && children}
       </div>
     </div>
