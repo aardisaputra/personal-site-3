@@ -34,17 +34,17 @@ export default function Home() {
         <div className="relative w-[85%] h-96 z-10">
           <div className="absolute w-full h-full translate-x-5 translate-y-5 bg-black" />
           <Image
-            src="/bg.webp"
+            src="/rockstar.gif"
             fill
             className="object-cover sepia-[0.5] brightness-50 border-solid border-4 border-black"
             alt="Picture of jakarta"
           />
-          <div className={`${robotoCondensed400.className}`}>
+          <div className={`${robotoCondensed400.className} shadow-and-slide`}>
             <p className="absolute z-10 ml-[1.4em] mt-[14.1em] text-l">
               Hi, my name is
             </p>
           </div>
-          <div className={`${robotoCondensed500.className}`}>
+          <div className={`${robotoCondensed500.className} slide-in-left shadow-and-slide`}>
             <h1 className="absolute z-10 ml-[0.3em] mt-[5.3em] text-5xl">
               AUSTIN
               <br />
@@ -76,7 +76,7 @@ export default function Home() {
             </div>
             <div className="relative h-[11rem] z-10 mx-5">
               <h3
-                className={`${robotoCondensed400.className} text-black text-center`}
+                className={`${robotoCondensed400.className} text-black text-center text-shadow-drop-center fade-in`}
               >
                 Welcome to a glimpse of my professional/creative endeavors. I
                 code and drink diet coke. Talk to me about full-stack
@@ -131,16 +131,18 @@ export default function Home() {
             </div>
             <div className="flex flex-wrap justify-center gap-3 mt-[0.5em] mx-[1em] pb-[3em]">
               {frontendLogos.map((logo) => (
-                <Image
-                  key={logo}
-                  src={`/${logo}.svg`}
-                  width={80}
-                  height={80}
-                  style={{
-                    objectFit: "contain",
-                  }}
-                  alt="Connecting line"
+                <div className="hover:brightness-50">
+                  <Image
+                    key={logo}
+                    src={`/${logo}.svg`}
+                    width={80}
+                    height={80}
+                    style={{
+                      objectFit: "contain",
+                    }}
+                    alt="Connecting line"
                 />
+                </div>
               ))}
             </div>
             <div className="w-full text-center pb-2">
@@ -148,16 +150,18 @@ export default function Home() {
             </div>
             <div className="flex flex-wrap justify-center gap-3 mt-[0.5em] mx-[1em]">
               {backendLogos.map((logo) => (
-                <Image
-                  key={logo}
-                  src={`/${logo}.svg`}
-                  width={80}
-                  height={80}
-                  style={{
-                    objectFit: "contain",
-                  }}
-                  alt="Connecting line"
-                />
+                <div className="hover:brightness-50">
+                  <Image
+                    key={logo}
+                    src={`/${logo}.svg`}
+                    width={80}
+                    height={80}
+                    style={{
+                      objectFit: "contain",
+                    }}
+                    alt="Connecting line"
+                  />
+                </div>
               ))}
             </div>
           </div>
@@ -296,11 +300,19 @@ export default function Home() {
         <ExpandableView title="PROJECTS">
           <div className={`${robotoCondensed500.className} mt-[7em]`}>
             <div className="flex flex-wrap justify-center">
-              <div className="w-[15em] h-[12em] bg-white rounded-xl">
+              <div className="w-[15em] h-[12em] z-10 rounded-xl">
+                <div className="relative w-full h-[12em] rounded-xl ">
+                  <Image
+                    src="/wealthdash.png"
+                    fill
+                    className="object-cover"
+                    alt="Picture of Austin"
+                  />
+                </div>
                 <div className="relative w-[15em] h-[6em] top-[6em] bg-gray-500 rounded-b-xl">
-                  <div className="flex-col ml-[1em] pt-[1em]">WealthDash</div>
+                  <div className="flex-col ml-[1em] pt-[0.75em]">WealthDash</div>
                   <div className={`${robotoCondensed200.className}`}>
-                    <div className="flex-col ml-[1em]">
+                    <div className="flex-col mx-[1em]">
                       Lunch menu voting for Wealthfront employees
                     </div>
                   </div>
