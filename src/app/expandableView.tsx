@@ -17,15 +17,21 @@ export default function ExpandableView({ title, children }: Props) {
         expandState
           ? title === "SKILLS"
             ? "h-[46rem]"
-            : "h-[52rem]"
+            : title === "EXPERIENCE"
+              ? "h-[52rem]"
+              : "h-[120rem]"
           : "h-[8rem]"
       }`}
       onClick={() => {
         setExpandState(!expandState);
       }}
     >
+      <div className="absolute w-full min-h-full right-3 translate-y-3 bg-[#736C6C]" />
+      <div className="absolute w-full min-h-full bg-[#000000]">
+        {expandState && children}
+      </div>
       <svg
-        className="absolute z-10 fill-white shrink-0 ml-8 mt-[3em]"
+        className="absolute fill-white shrink-0 ml-8 mt-[3em]"
         width="32"
         height="32"
         xmlns="http://www.w3.org/2000/svg"
@@ -46,13 +52,7 @@ export default function ExpandableView({ title, children }: Props) {
         />
       </svg>
       <div className={robotoCondensed500.className}>
-        <h1 className="absolute z-10 ml-[1.7em] mt-[0.85em] text-5xl">
-          {title}
-        </h1>
-      </div>
-      <div className="absolute w-full min-h-full right-3 translate-y-3 bg-[#736C6C]" />
-      <div className="absolute w-full min-h-full bg-[#000000]">
-        {expandState && children}
+        <h1 className="absolute ml-[1.7em] mt-[0.85em] text-5xl">{title}</h1>
       </div>
     </div>
   );

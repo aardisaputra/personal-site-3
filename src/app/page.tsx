@@ -27,6 +27,8 @@ export default function Home() {
     "python",
   ];
 
+  const footer = ["github", "email", "linkedin", "instagram", "resume"];
+
   return (
     <main className="">
       {/* Hero Section START */}
@@ -44,7 +46,9 @@ export default function Home() {
               Hi, my name is
             </p>
           </div>
-          <div className={`${robotoCondensed500.className} slide-in-left shadow-and-slide`}>
+          <div
+            className={`${robotoCondensed500.className} slide-in-left shadow-and-slide`}
+          >
             <h1 className="absolute z-10 ml-[0.3em] mt-[5.3em] text-5xl">
               AUSTIN
               <br />
@@ -131,9 +135,8 @@ export default function Home() {
             </div>
             <div className="flex flex-wrap justify-center gap-3 mt-[0.5em] mx-[1em] pb-[3em]">
               {frontendLogos.map((logo) => (
-                <div className="hover:brightness-50">
+                <div key={logo} className="hover:brightness-50">
                   <Image
-                    key={logo}
                     src={`/${logo}.svg`}
                     width={80}
                     height={80}
@@ -141,7 +144,7 @@ export default function Home() {
                       objectFit: "contain",
                     }}
                     alt="Connecting line"
-                />
+                  />
                 </div>
               ))}
             </div>
@@ -150,9 +153,8 @@ export default function Home() {
             </div>
             <div className="flex flex-wrap justify-center gap-3 mt-[0.5em] mx-[1em]">
               {backendLogos.map((logo) => (
-                <div className="hover:brightness-50">
+                <div key={logo} className="hover:brightness-50">
                   <Image
-                    key={logo}
                     src={`/${logo}.svg`}
                     width={80}
                     height={80}
@@ -299,18 +301,20 @@ export default function Home() {
         </ExpandableView>
         <ExpandableView title="PROJECTS">
           <div className={`${robotoCondensed500.className} mt-[7em]`}>
-            <div className="flex flex-wrap justify-center">
-              <div className="w-[15em] h-[12em] z-10 rounded-xl">
-                <div className="relative w-full h-[12em] rounded-xl ">
+            <div className="flex flex-wrap justify-center gap-6 mt-[8em]">
+              <div className="w-[15em] h-[12em] rounded-xl bg-white">
+                <div className="relative w-full h-[6em] rounded-xl ">
                   <Image
                     src="/wealthdash.png"
                     fill
-                    className="object-cover"
+                    className="object-contain rounded-t-xl"
                     alt="Picture of Austin"
                   />
                 </div>
-                <div className="relative w-[15em] h-[6em] top-[6em] bg-gray-500 rounded-b-xl">
-                  <div className="flex-col ml-[1em] pt-[0.75em]">WealthDash</div>
+                <div className="relative w-[15em] h-[6em] bg-gray-500 rounded-b-xl">
+                  <div className="flex-col ml-[1em] pt-[0.75em]">
+                    WealthDash
+                  </div>
                   <div className={`${robotoCondensed200.className}`}>
                     <div className="flex-col mx-[1em]">
                       Lunch menu voting for Wealthfront employees
@@ -318,18 +322,166 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+              <div className="w-[15em] h-[12em] rounded-xl bg-white">
+                <div className="relative w-full h-[6em] rounded-xl ">
+                  <Image
+                    src="/pedal.png"
+                    fill
+                    className="object-contain rounded-t-xl"
+                    alt="Picture of Austin"
+                  />
+                </div>
+                <div className="relative w-[15em] h-[6em] bg-gray-500 rounded-b-xl">
+                  <div className="flex-col ml-[1em] pt-[0.75em]">PedaL</div>
+                  <div className={`${robotoCondensed200.className}`}>
+                    <div className="flex-col mx-[1em]">
+                      Instant AI feedback for lecturers and presenters.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="w-[15em] h-[12em] rounded-xl bg-white">
+                <div className="relative w-full h-[6em] rounded-xl ">
+                  <Image
+                    src="/littlegems.png"
+                    fill
+                    className="object-contain rounded-t-xl"
+                    alt="Picture of Austin"
+                  />
+                </div>
+                <div className="relative w-[15em] h-[6em] bg-gray-500 rounded-b-xl">
+                  <div className="flex-col ml-[1em] pt-[0.75em]">
+                    Little Gems
+                  </div>
+                  <div className={`${robotoCondensed200.className}`}>
+                    <div className="flex-col mx-[1em]">
+                      Connect with locals to discover hidden gems when traveling
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="w-[15em] h-[12em] rounded-xl bg-white">
+                <div className="relative w-full h-[6em] rounded-xl ">
+                  <Image
+                    src="/aequalis.jpg"
+                    fill
+                    className="object-contain rounded-t-xl"
+                    alt="Picture of Austin"
+                  />
+                </div>
+                <div className="relative w-[15em] h-[6em] bg-gray-500 rounded-b-xl">
+                  <div className="flex-col ml-[1em] pt-[0.75em]">Aequalis</div>
+                  <div className={`${robotoCondensed200.className}`}>
+                    <div className="flex-col mx-[1em]">
+                      Healthcare equity dApp, 2nd best use of Solana in CalHacks
+                      2022.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="w-[15em] h-[12em] rounded-xl bg-white">
+                <div className="relative w-full h-[6em] rounded-xl ">
+                  <Image
+                    src="/blacklitterman.png"
+                    fill
+                    className="object-contain rounded-t-xl"
+                    alt="Picture of Austin"
+                  />
+                </div>
+                <div className="relative w-[15em] h-[6em] bg-gray-500 rounded-b-xl">
+                  <div className="flex-col ml-[1em] pt-[0.75em]">
+                    Portfolio Rebalancing Bot
+                  </div>
+                  <div className={`${robotoCondensed200.className}`}>
+                    <div className="flex-col mx-[1em]">
+                      Won 3rd place in UChicago Trading Competition 2022
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="w-[15em] h-[12em] rounded-xl bg-white">
+                <div className="relative w-full h-[6em] rounded-xl ">
+                  <Image
+                    src="/tasim.png"
+                    fill
+                    className="object-contain rounded-t-xl"
+                    alt="Picture of Austin"
+                  />
+                </div>
+                <div className="relative w-[15em] h-[6em] bg-gray-500 rounded-b-xl">
+                  <div className="flex-col ml-[1em] pt-[0.75em]">
+                    Technical Analaysis Simulator
+                  </div>
+                  <div className={`${robotoCondensed200.className}`}>
+                    <div className="flex-col mx-[1em]">
+                      Learn and dabble into technical analysis with intuitive
+                      UI.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="w-[15em] h-[12em] rounded-xl bg-white">
+                <div className="relative w-full h-[6em] rounded-xl ">
+                  <Image
+                    src="/warden.png"
+                    fill
+                    className="object-contain rounded-t-xl"
+                    alt="Picture of Austin"
+                  />
+                </div>
+                <div className="relative w-[15em] h-[6em] bg-gray-500 rounded-b-xl">
+                  <div className="flex-col ml-[1em] pt-[0.75em]">Warden</div>
+                  <div className={`${robotoCondensed200.className}`}>
+                    <div className="flex-col mx-[1em]">
+                      On-campus safety app awarded 1st place in 2021 CivHacks.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="w-[15em] h-[12em] rounded-xl bg-white">
+                <div className="relative w-full h-[6em] rounded-xl ">
+                  <Image
+                    src="/quiconnect.png"
+                    fill
+                    className="object-contain rounded-t-xl"
+                    alt="Picture of Austin"
+                  />
+                </div>
+                <div className="relative w-[15em] h-[6em] bg-gray-500 rounded-b-xl">
+                  <div className="flex-col ml-[1em] pt-[0.75em]">
+                    QuiConnect
+                  </div>
+                  <div className={`${robotoCondensed200.className}`}>
+                    <div className="flex-col mx-[1em]">
+                      Basically Apple NameDrop before it existed. Made in 2021
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* BEGIN SECTION FOOTER */}
+              <div className="h1">Find more projects in my GitHub!</div>
             </div>
           </div>
         </ExpandableView>
       </div>
       {/* More Info Section END */}
+      <div className="h-[3rem]"></div>
 
       {/* Footer Section START */}
-      <div className="flex flex-row mt-10">
-        <div className="relative w-1/4 h-[5rem] z-10 bg-[#40f172]"></div>
-        <div className="relative w-1/4 h-[5rem] z-10 bg-[#ebf140]"></div>
-        <div className="relative w-1/4 h-[5rem] z-10 bg-[#40f172]"></div>
-        <div className="relative w-1/4 h-[5rem] z-10 bg-[#ebf140]"></div>
+      <div className="flex justify-center gap-x-[2em] mx-auto w-full h-[5rem] sticky bottom-0 slide-in-bottom bg-gradient-to-r from-[#8c8970] to-[#4d4b3c] border-t-[7px] outline-offset-[-20px] rounded-t-[40px]">
+        {footer.map((img) => (
+          <div key={img} className="relative h-[2rem] mt-[1rem]">
+            <Image
+              src={`/${img}.svg`}
+              width={40}
+              height={40}
+              style={{
+                objectFit: "contain",
+              }}
+              alt={img}
+            />
+          </div>
+        ))}
       </div>
       {/* Footer Section END */}
     </main>
