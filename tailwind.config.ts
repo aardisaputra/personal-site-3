@@ -7,6 +7,9 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      'xs': '375px',
+    },
     extend: {
       animation: {
         typewriter: "typewriter 2s steps(11) forwards",

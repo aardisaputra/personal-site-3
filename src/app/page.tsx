@@ -30,10 +30,10 @@ export default function Home() {
   const footer = ["github", "email", "linkedin", "instagram", "resume"];
 
   return (
-    <main className="">
+    <main className="overscroll-contain">
       {/* Hero Section START */}
       <div className="flex justify-center mb-5 mt-6">
-        <div className="relative w-[85%] h-96 z-10">
+        <div className="relative w-[85%] lg:w-[50%] h-96 z-10">
           <div className="absolute w-full h-full translate-x-5 translate-y-5 bg-black" />
           <Image
             src="/rockstar.gif"
@@ -61,12 +61,12 @@ export default function Home() {
       {/* Hero Section END */}
 
       {/* About Section START */}
-      <div className="flex flex-row mt-10">
-        <div className="relative w-1/2 h-[16rem] z-10">
+      <div className="flex flex-row mt-10 lg:w-[50%] mx-auto">
+        <div className="relative w-1/2 h-[16rem]">
           <div className="flex flex-col">
-            <div className="relative h-[2.5rem] z-10">
+            <div className="relative h-[2.5rem]">
               <div className="flex justify-center">
-                <div className="relative w-[10rem] h-[2.5rem] z-10">
+                <div className="relative w-[10rem] h-[2.5rem]">
                   <Image
                     src="/line.svg"
                     fill
@@ -78,18 +78,18 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="relative h-[11rem] z-10 mx-5">
+            <div className="relative grow-0 mx-5 my-auto">
               <h3
-                className={`${robotoCondensed400.className} text-black text-center text-shadow-drop-center fade-in`}
+                className={`${robotoCondensed400.className} text-black text-center text-shadow-drop-center fade-in mx-[0%] lg:mt-[0.7rem] md:mx-[3.5rem] xs:text-sm`}
               >
                 Welcome to a glimpse of my professional/creative endeavors. I
                 code and drink diet coke. Talk to me about full-stack
                 development, fintech, dev-ops, ETL pipelines, or anything.
               </h3>
             </div>
-            <div className="relative h-[2.5rem] z-10">
+            <div className="relative grow h-[2.5rem]">
               <div className="flex justify-center">
-                <div className="relative w-[10rem] h-[2.5rem] z-10">
+                <div className="relative w-[10rem] h-[2.5rem]">
                   <Image
                     src="/line.svg"
                     fill
@@ -103,12 +103,12 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="relative w-1/2 h-[16rem] z-10">
+        <div className="relative w-1/2 h-[16rem]">
           <div className="flex flex-col justify-center">
-            <div className="relative h-[1rem] z-10"></div>
-            <div className="relative h-[14rem] z-10">
+            <div className="relative h-[1rem]"></div>
+            <div className="relative h-[14rem]">
               <div className="flex justify-center">
-                <div className="relative w-[10rem] h-[14rem] z-10">
+                <div className="relative w-[10rem] h-[14rem]">
                   <div className="absolute w-full h-full right-[0.75rem] top-[0.75rem] bg-black" />
                   <Image
                     src="/austin.png"
@@ -127,7 +127,7 @@ export default function Home() {
       {/* About Section END */}
 
       {/* More Info Section START */}
-      <div className="flex flex-col mt-7 space-y-8">
+      <div className="flex flex-col mt-7 space-y-8 lg:w-[50%] mx-auto">
         <ExpandableView title="SKILLS">
           <div className={`${robotoCondensed500.className} mt-[7em]`}>
             <div className="w-full text-center pb-2">
@@ -468,7 +468,7 @@ export default function Home() {
       <div className="h-[3rem]"></div>
 
       {/* Footer Section START */}
-      <div className="flex justify-center gap-x-[2em] mx-auto w-full h-[5rem] sticky bottom-0 slide-in-bottom bg-gradient-to-r from-[#8c8970] to-[#4d4b3c] border-t-[7px] outline-offset-[-20px] rounded-t-[40px]">
+      <div className="overflow-y-scroll flex justify-center gap-x-[2em] mx-auto w-full h-[5rem] sticky bottom-0 slide-in-bottom bg-gradient-to-r from-[#8c8970] to-[#4d4b3c] border-t-[7px] outline-offset-[-20px] rounded-t-[40px]">
         {footer.map((img) => (
           <div key={img} className="relative h-[2rem] mt-[1rem]">
             <Image
