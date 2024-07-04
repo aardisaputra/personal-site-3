@@ -16,10 +16,10 @@ export default function ExpandableView({ title, children }: Props) {
       className={`relative mx-[2rem] transition-all duration-300 ease-in-out ${
         expandState
           ? title === "SKILLS"
-            ? "h-[46rem]"
+            ? "h-[46rem] md:h-[36rem]"
             : title === "EXPERIENCE"
               ? "h-[52rem]"
-              : "h-[120rem]"
+              : "h-[120rem] lg:h-[68rem]"
           : "h-[8rem]"
       }`}
       onClick={() => {
@@ -52,12 +52,11 @@ export default function ExpandableView({ title, children }: Props) {
         />
       </svg>
       <div className={robotoCondensed500.className}>
-        <span class="absolute ml-[1.7em] mt-[0.85em] xs:ml-[2.1em] xs:mt-[1.2em] border w-fit bg-gradient-to-r blur-xl from-white to-gray-200 bg-clip-text text-5xl xs:text-4xl box-content font-extrabold text-transparent text-center select-none">
+        <span className="absolute ml-[2.1em] mt-[1.25em] xs:ml-[1.7em] xs:mt-[0.85em] border w-fit bg-gradient-to-r blur-xl from-white to-gray-200 bg-clip-text text-4xl xs:text-5xl box-content font-extrabold text-transparent text-center select-none">
           {title}
         </span>
-        <h1
-            class="absolute ml-[1.7em] mt-[0.85em] xs:ml-[2.1em] xs:mt-[1.2em] bg-gradient-to-r items-center from-white to-gray-200 bg-clip-text text-5xl xs:text-4xl font-extrabold text-transparent select-auto">
-            {title}
+        <h1 className="absolute ml-[2.1em] mt-[1.25em] xs:ml-[1.7em] xs:mt-[0.85em] bg-gradient-to-r items-center from-white to-gray-200 bg-clip-text text-4xl xs:text-5xl font-extrabold text-transparent select-auto">
+          {title}
         </h1>
         {/* <h1 className="absolute ml-[1.7em] mt-[0.85em] text-5xl">{title}</h1> */}
       </div>

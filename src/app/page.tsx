@@ -30,10 +30,10 @@ export default function Home() {
   const footer = ["github", "email", "linkedin", "instagram", "resume"];
 
   return (
-    <main className="overscroll-contain">
+    <main className="overscroll-contain bg-matte bg-fixed">
       {/* Hero Section START */}
-      <div className="flex justify-center mb-5 mt-6">
-        <div className="relative w-[85%] lg:w-[50%] h-96 z-10">
+      <div className="flex justify-center b-5 pt-6">
+        <div className="relative sm:w-[60%] xl:w-[40%] 2xl:w-[30%] w-[85%] h-96 z-10">
           <div className="absolute w-full h-full translate-x-5 translate-y-5 bg-black" />
           <Image
             src="/rockstar.gif"
@@ -61,12 +61,12 @@ export default function Home() {
       {/* Hero Section END */}
 
       {/* About Section START */}
-      <div className="flex flex-row mt-10 lg:w-[50%] mx-auto">
+      <div className="flex flex-row mt-10 sm:w-[60%] xl:w-[40%] 2xl:w-[30%] mx-auto">
         <div className="relative w-1/2 h-[16rem]">
-          <div className="flex flex-col">
-            <div className="relative h-[2.5rem]">
+          <div className="flex flex-col h-full">
+            <div className="relative h-[3rem] my-auto xs:h-[2.5rem]">
               <div className="flex justify-center">
-                <div className="relative w-[10rem] h-[2.5rem]">
+                <div className="relative w-[10rem] h-[3rem] xs:h-[2.5rem]">
                   <Image
                     src="/line.svg"
                     fill
@@ -78,18 +78,18 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="relative grow-0 mx-5 my-auto">
+            <div className="relative mx-[2em] py-1 my-auto">
               <h3
-                className={`${robotoCondensed400.className} text-black text-center text-shadow-drop-center fade-in mx-[0%] lg:mt-[0.7rem] md:mx-[3.5rem] xs:text-sm`}
+                className={`${robotoCondensed400.className} text-black text-center text-shadow-drop-center fade-in mx-[0%] md:mx-[1rem] xs:text-sm text-xs`}
               >
                 Welcome to a glimpse of my professional/creative endeavors. I
                 code and drink diet coke. Talk to me about full-stack
                 development, fintech, dev-ops, ETL pipelines, or anything.
               </h3>
             </div>
-            <div className="relative grow h-[2.5rem]">
+            <div className="relative h-[3rem] my-auto xs:h-[2.5rem]">
               <div className="flex justify-center">
-                <div className="relative w-[10rem] h-[2.5rem]">
+                <div className="relative w-[10rem] h-[3rem] xs:h-[2.5rem]">
                   <Image
                     src="/line.svg"
                     fill
@@ -127,9 +127,11 @@ export default function Home() {
       {/* About Section END */}
 
       {/* More Info Section START */}
-      <div className="flex flex-col mt-7 space-y-8 lg:w-[50%] mx-auto">
+      <div className="flex flex-col mt-7 space-y-8 sm:w-[75%] xl:w-[55%] 2xl:w-[40%] mx-auto">
         <ExpandableView title="SKILLS">
-          <div className={`${robotoCondensed500.className} mt-[7em]`}>
+          <div
+            className={`${robotoCondensed500.className} mt-[7em] md:mx-[1rem]`}
+          >
             <div className="w-full text-center pb-2">
               <h1>Frontend</h1>
             </div>
@@ -170,7 +172,7 @@ export default function Home() {
         </ExpandableView>
         <ExpandableView title="EXPERIENCE">
           <div className={`${robotoCondensed500.className} mt-[7em]`}>
-            <div className="flex flex-col mt-[0.5em] ml-[3em] pb-[1em] gap-5">
+            <div className="flex flex-col mt-[1em] ml-[2em] xs:ml-[10%] 2xl:ml-[25%] mr-[1em] pb-[1em] gap-5">
               <div className="flex flex-row gap-3">
                 <Image
                   src={`/wealthfront.svg`}
@@ -301,7 +303,7 @@ export default function Home() {
         </ExpandableView>
         <ExpandableView title="PROJECTS">
           <div className={`${robotoCondensed500.className} mt-[7em]`}>
-            <div className="flex flex-wrap justify-center gap-6 mt-[8em]">
+            <div className="flex flex-wrap justify-center gap-6 mt-[8em] md:mx-[4em]">
               <div className="w-[15em] h-[12em] rounded-xl bg-white">
                 <div className="relative w-full h-[6em] rounded-xl ">
                   <Image
@@ -458,8 +460,9 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              {/* BEGIN SECTION FOOTER */}
-              <div className="h1">Find more projects in my GitHub!</div>
+            </div>
+            <div className="h1 bottom-0 text-center w-100% mt-[1.5em]">
+              Find more projects in my GitHub!
             </div>
           </div>
         </ExpandableView>
@@ -468,7 +471,7 @@ export default function Home() {
       <div className="h-[3rem]"></div>
 
       {/* Footer Section START */}
-      <div className="overflow-y-scroll flex justify-center gap-x-[2em] mx-auto w-full h-[5rem] sticky bottom-0 slide-in-bottom bg-gradient-to-r from-[#8c8970] to-[#4d4b3c] border-t-[7px] outline-offset-[-20px] rounded-t-[40px]">
+      <div className="sm:w-[80%] xl:w-[60%] 2xl:w-[45%] overflow-y-scroll flex justify-center gap-x-[2em] mx-auto w-full h-[5rem] sticky bottom-0 slide-in-bottom bg-gradient-to-r from-[#8c8970] to-[#4d4b3c] border-t-[7px] border-x-[7px] outline-offset-[-20px] rounded-t-[40px]">
         {footer.map((img) => (
           <div key={img} className="relative h-[2rem] mt-[1rem]">
             <Image
