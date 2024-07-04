@@ -78,9 +78,9 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="relative mx-[2em] py-1 my-auto">
+            <div className="relative mx-[2em] py-1 my-auto box-shadow-2xl">
               <h3
-                className={`${robotoCondensed400.className} text-black text-center text-shadow-drop-center fade-in mx-[0%] md:mx-[1rem] xs:text-sm text-xs`}
+                className={`${robotoCondensed400.className} text-black text-center fade-in mx-[0%] md:mx-[1rem] xs:text-sm text-xs`}
               >
                 Welcome to a glimpse of my professional/creative endeavors. I
                 code and drink diet coke. Talk to me about full-stack
@@ -471,9 +471,9 @@ export default function Home() {
       <div className="h-[3rem]"></div>
 
       {/* Footer Section START */}
-      <div className="sm:w-[80%] xl:w-[60%] 2xl:w-[45%] overflow-y-scroll flex justify-center gap-x-[2em] mx-auto w-full h-[5rem] sticky bottom-0 slide-in-bottom bg-gradient-to-r from-[#8c8970] to-[#4d4b3c] border-t-[7px] border-x-[7px] outline-offset-[-20px] rounded-t-[40px]">
+      <div className="sm:w-[80%] xl:w-[60%] 2xl:w-[45%] flex justify-center gap-x-[2em] mx-auto w-full h-[5rem] sticky bottom-0 slide-in-bottom bg-gradient-to-r from-[#8c8970] to-[#4d4b3c] border-t-[7px] border-x-[7px] outline-offset-[-20px] rounded-t-[40px]">
         {footer.map((img) => (
-          <div key={img} className="relative h-[2rem] mt-[1rem]">
+          <div key={img} className="relative h-[2rem] mt-[1rem] shadow-2xl">
             <Image
               src={`/${img}.svg`}
               width={40}
